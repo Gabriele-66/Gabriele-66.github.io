@@ -245,9 +245,9 @@ section {
 }
 
 
-/* SUBSCRIBE */
+/* team-skills */
 
-#subscribe .container {
+#team-skills .container {
     background: url(../images/body-bg1.png) repeat 0 0;
     height: 100vh;
     width: 100% !important;
@@ -255,13 +255,13 @@ section {
     z-index: 998;
 }
 
-#subscribe {
+#team-skills {
     background: url(../images/bg-subscribe.jpg) no-repeat fixed center center / cover rgba(0, 0, 0, 0);
     padding: 0px;
     min-height: 430px;
 }
 
-#subscribe .icontop {
+#team-skills .icontop {
     position: absolute;
     color: #fff;
     margin: -30px auto;
@@ -276,29 +276,29 @@ section {
     box-shadow: 0 0 0 1px #F4442E;
 }
 
-#subscribe .row {
+#team-skills .row {
     padding: 100px 0px 120px 0px;
 }
 
-#subscribe h5 {
+#team-skills h5 {
     margin-bottom: 45px;
 }
 
-#subscribe .form-control {
+#team-skills .form-control {
     display: inline-block;
     border: 1px solid #fff;
     width: 320px;
 }
 
-#subscribe .form-control::-moz-placeholder {
+#team-skills .form-control::-moz-placeholder {
     color: #fff;
 }
 
-#subscribe .button-leweb {
+#team-skills .button-leweb {
     display: inline-block;
 }
 
-#subscribe #mc_form label {
+#team-skills #mc_form label {
     display: block;
     font-size: 12px !important;
     margin-top: 10px;
@@ -307,7 +307,7 @@ section {
     color: #fff;
 }
 
-#subscribe #mc_form .valid:before {
+#team-skills #mc_form .valid:before {
     font-family: FontAwesome;
     top: 0;
     content: "\f058";
@@ -316,7 +316,7 @@ section {
     color: #b8c000;
 }
 
-#subscribe #mc_form .error:before {
+#team-skills #mc_form .error:before {
     font-family: FontAwesome;
     top: 0;
     content: "\f071";
