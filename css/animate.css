@@ -14,7 +14,7 @@
     --animate-repeat: 1
 }
 
-.animate__animated {
+d .animate__animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-duration: var(--animate-duration);
