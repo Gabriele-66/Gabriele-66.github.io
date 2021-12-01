@@ -179,53 +179,25 @@
                     <!-- to get an API token!-->
                     <form method="POST" action="https://formspree.io/f/meqnjryb">
                         <!-- Name input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                            <label for="name">Full name</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        <div class="form-floating mb-3" class="form-group col-md-6" data-sr="enter left over 1s, wait 0.3s, move 24px, reset">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name..." />
                         </div>
                         <!-- Email address input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                            <label for="email">Email address</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        <div data-sr="enter right over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-6">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" />
                         </div>
                         <!-- Phone number input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                            <label for="phone">Phone number</label>
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
-                            </div>
+                        <div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number" />
                         </div>
                         <!-- Message input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                            </div>
-                        </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        <div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
+                            <textarea cols="60" rows="3" id="comment" name="comment" class="form-control" placeholder="Write your comment here..."></textarea>
                         </div>
                         <!-- Submit Button-->
-                        <button class="btn btn-primary btn-xl " id="submitButton" type="submit">Send</button>
+                        <div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-sm-12 ">
+                            <button type="submit" class="button-leweb">Send Message</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -246,19 +218,19 @@
                 <!-- Footer Social Icons-->
                 <div class="col-lg-4 mb-5 mb-lg-0 ">
                     <h4 class="text-uppercase mb-4 ">Around the Web</h4>
-                    <a class="btn btn-outline-light btn-social mx-1 " href="#! "><i
-                            class="fab fa-fw fa-facebook-f "></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1 " href="#! "><i class="fab fa-fw fa-twitter "></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1 " href="#! "><i
+
+
+                    <a class="btn btn-outline-light btn-social mx-1 " href="https://www.linkedin.com/in/gabriele-r-0a2aa41a2/ "><i
                             class="fab fa-fw fa-linkedin-in "></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1 " href="#! "><i class="fab fa-fw fa-dribbble "></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1 " href="https://github.com/Gabriele-66 "><i 
+                        class=" fab fa-fw fa-github "></i></a>
                 </div>
                 <!-- Footer About Text-->
                 <div class="col-lg-4 ">
-                    <h4 class="text-uppercase mb-4 ">About Freelancer</h4>
-                    <p class="lead mb-0 ">
-                        Freelance is a free to use, MIT licensed Bootstrap theme created by
-                        <a href="http://startbootstrap.com ">Start Bootstrap</a> .
+                    <h4 class="text-uppercase mb-4 ">Download CV</h4>
+                    <p>
+                        <a class="btn btn-outline-light btn-social mx-1 " href=" file/65b32113-19ba-4c55-890c-3c0b6d265a9a.pdf "><i
+                                class="fa fa-download  "></i></a>
                     </p>
                 </div>
             </div>
@@ -266,7 +238,7 @@
     </footer>
     <!-- Copyright Section-->
     <div class="copyright py-4 text-center text-white ">
-        <div class="container "><small>Copyright &copy; Your Website 2021</small></div>
+        <div class="container "><small>Copyright &copy; 2022 | DESIGN BY GABRIELE RECCHIA</small></div>
     </div>
     <!-- Portfolio Modals-->
     <!-- Portfolio Modal 1-->
@@ -290,8 +262,7 @@
                                 <img class="img-fluid rounded mb-5 " src="img/portfolio/cabin.png " alt="... " />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-                                    itaque. Nam.
-                                </p>
+                                    itaque. Nam.</p>
                                 <button class="btn btn-primary " href="#! " data-bs-dismiss="modal ">
                                     <i class="fas fa-times fa-fw "></i>
                                     Close Window
@@ -324,8 +295,7 @@
                                 <img class="img-fluid rounded mb-5 " src="img/portfolio/cake.png " alt="... " />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-                                    itaque. Nam.
-                                </p>
+                                    itaque. Nam.</p>
                                 <button class="btn btn-primary " href="#! " data-bs-dismiss="modal ">
                                     <i class="fas fa-times fa-fw "></i>
                                     Close Window
@@ -358,8 +328,7 @@
                                 <img class="img-fluid rounded mb-5 " src="img/portfolio/circus.png " alt="... " />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-                                    itaque. Nam.
-                                </p>
+                                    itaque. Nam.</p>
                                 <button class="btn btn-primary " href="#! " data-bs-dismiss="modal ">
                                     <i class="fas fa-times fa-fw "></i>
                                     Close Window
@@ -392,8 +361,7 @@
                                 <img class="img-fluid rounded mb-5 " src="img/portfolio/game.png " alt="... " />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-                                    itaque. Nam.
-                                </p>
+                                    itaque. Nam.</p>
                                 <button class="btn btn-primary " href="#! " data-bs-dismiss="modal ">
                                     <i class="fas fa-times fa-fw "></i>
                                     Close Window
@@ -426,8 +394,7 @@
                                 <img class="img-fluid rounded mb-5 " src="img/portfolio/safe.png " alt="... " />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-                                    itaque. Nam.
-                                </p>
+                                    itaque. Nam.</p>
                                 <button class="btn btn-primary " href="#! " data-bs-dismiss="modal ">
                                     <i class="fas fa-times fa-fw "></i>
                                     Close Window
@@ -460,8 +427,7 @@
                                 <img class="img-fluid rounded mb-5 " src="img/portfolio/submarine.png " alt="... " />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-                                    itaque. Nam.
-                                </p>
+                                    itaque. Nam.</p>
                                 <button class="btn btn-primary " href="#! " data-bs-dismiss="modal ">
                                     <i class="fas fa-times fa-fw "></i>
                                     Close Window
