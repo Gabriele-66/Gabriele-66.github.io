@@ -88,7 +88,7 @@ body {
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
     text-align: var(--bs-body-text-align);
-    background-color: var(--bs-body-bg);
+    background-color: #171738;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -11186,7 +11186,7 @@ html {
 }
 
 #mainNav .navbar-brand {
-    color: #fff;
+    color: #ED6A5A;
 }
 
 #mainNav .navbar-nav {
@@ -11194,7 +11194,7 @@ html {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
-    color: #fff;
+    color: #ED6A5A;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
@@ -11346,7 +11346,6 @@ html {
 .footer {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color: #2c3e50;
     color: #fff;
 }
 
