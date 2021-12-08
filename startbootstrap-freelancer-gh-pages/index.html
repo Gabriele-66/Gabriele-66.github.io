@@ -14,8 +14,9 @@
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- Core theme CSS Bootstrap clean -->
     <link href="css/styles.css" rel="stylesheet" />
+    <!-- My styles-->
     <link href="css/m_style.css" rel="stylesheet" />
 </head>
 
@@ -72,7 +73,7 @@
             </div>
             <!-- Portfolio Grid Items-->
             <div class="row justify-content-center ">
-                <!-- Portfolio Item 1-->
+                <!-- Portfolio Item 1
                 <div class="col-md-6 col-lg-4 mb-5 ">
                     <div class="portfolio-item mx-auto " data-bs-toggle="modal " data-bs-target="#portfolioModal1 ">
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 ">
@@ -80,6 +81,16 @@
                         </div>
                         <img class="img-fluid " src="img/portfolio/cabin.png " alt="... " />
                     </div>
+                </div> -->
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="img/portfolio/cabin.png" alt="..." />
+                    </div>
+
                 </div>
                 <!-- Portfolio Item 2-->
                 <div class="col-md-6 col-lg-4 mb-5 ">
@@ -178,27 +189,53 @@
                     <!-- To make this form functional, sign up at-->
                     <!-- https://startbootstrap.com/solution/contact-forms-->
                     <!-- to get an API token!-->
-                    <form method="POST " action="https://formspree.io/f/meqnjryb ">
+                    <form method="POST" action="https://formspree.io/f/meqnjryb">
                         <!-- Name input-->
-                        <div class="form-floating mb-3 " class="form-group col-md-6 " data-sr="enter left over 1s, wait 0.3s, move 24px, reset ">
-                            <input type="text " class="form-control " id="name " name="name " placeholder="Enter your name... " />
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <label for="name">Full name</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                         </div>
                         <!-- Email address input-->
-                        <div data-sr="enter right over 1s, wait 0.3s, move 24px, reset " class="form-group col-md-6 ">
-                            <input type="email " class="form-control " id="email " name="email " placeholder="name@example.com " />
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                            <label for="email">Email address</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                         </div>
                         <!-- Phone number input-->
-                        <div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset " class="form-group col-md-12 ">
-                            <input type="text " class="form-control " id="phone " name="phone " placeholder="Phone Number " />
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                            <label for="phone">Phone number</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                         </div>
                         <!-- Message input-->
-                        <div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset " class="form-group col-md-12 ">
-                            <textarea cols="60 " rows="3 " id="comment " name="comment " class="form-control " placeholder="Write your comment here... "></textarea>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <label for="message">Message</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        </div>
+                        <!-- Submit success message-->
+                        <!---->
+                        <!-- This is what your users will see when the form-->
+                        <!-- has successfully submitted-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                To activate this form, sign up at
+                                <br />
+                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
                         </div>
                         <!-- Submit Button-->
-                        <div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset " class="form-group col-sm-12 ">
-                            <button type="submit " class="button-leweb ">Send Message</button>
-                        </div>
+                        <button class="btn btn-primary btn-xl " id="submitButton" type="submit">Send</button>
                     </form>
                 </div>
             </div>
@@ -275,6 +312,44 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Portfolio Modal 1-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
+                                    itaque. Nam.</p>
+                                <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Close Window
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- Portfolio Modal 2-->
     <div class="portfolio-modal modal fade " id="portfolioModal2 " tabindex="-1 " aria-labelledby="portfolioModal2 " aria-hidden="true ">
         <div class="modal-dialog modal-xl ">
@@ -450,5 +525,7 @@
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js "></script>
 </body>
+
+</html>
 
 </html>
