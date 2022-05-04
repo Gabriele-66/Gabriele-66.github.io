@@ -1,8 +1,12 @@
+html,
 body{
-  background-color: #040D19;
+  background-color:rgb(13, 17, 23);
+  color: rgb(201, 209, 217) !important;
 }
 
+ /* sovrascrive css prime
  ::ng-deep p-fieldset:hover{
-  background-color: #040D19 !important;
-  color: #040D19 !important;
+  background-color: rgb(13, 17, 23) !important;
+  color: rgb(201, 209, 217) !important;
 }
+*/
