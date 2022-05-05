@@ -10,7 +10,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
-import {DropdownModule} from 'primeng/dropdown';
+import { DropdownModule } from 'primeng/dropdown';
+import { ProgressBarModule } from 'primeng/progressbar';
+import {CardModule} from 'primeng/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,6 +53,8 @@ import { AboutComponent } from './about/about.component';
     InputTextModule,
     ButtonModule,
     DropdownModule,
+    ProgressBarModule,
+    CardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
