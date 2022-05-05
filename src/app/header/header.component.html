@@ -1,4 +1,4 @@
-<p-menubar [model]="items">
+<p-menubar styleClass="custom-menubar" [model]="items">
   <div>
     <p-dropdown [options]="lang" [(ngModel)]="selectedLang" optionLabel="lan" optionValue="code" (onClick)="language()"></p-dropdown>
   </div>

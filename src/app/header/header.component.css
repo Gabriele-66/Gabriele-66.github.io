@@ -1,0 +1,11 @@
+::ng-deep p-menubar{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+::ng-deep .custom-menubar{
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}

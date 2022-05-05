@@ -1,12 +1,5 @@
 html,
 body{
-  background-color:rgb(13, 17, 23);
+  background-color:rgb(13, 17, 23) !important;
   color: rgb(201, 209, 217) !important;
 }
-
- /* sovrascrive css prime
- ::ng-deep p-fieldset:hover{
-  background-color: rgb(13, 17, 23) !important;
-  color: rgb(201, 209, 217) !important;
-}
-*/
