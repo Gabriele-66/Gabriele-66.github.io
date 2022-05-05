@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { MenuItem,PrimeIcons } from 'primeng/api';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -7,37 +8,58 @@ import { MenuItem,PrimeIcons } from 'primeng/api';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  public labelsHeaderComponent: any;
+
   items!: MenuItem[];
 
-  constructor() { }
+  public lang: any[] = [];
+  public selectedLang: string = "";
+
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
 
-    this.items = [
-      {
-        label: 'About',
-        icon: PrimeIcons.PLUS,
-      },
-      {
-        label: 'Skills',
-        icon: PrimeIcons.PALETTE,
-      },
-      {
-        label: 'Experience',
-        icon: PrimeIcons.CODE,
-      },
-      {
-        label: 'Education',
-        icon: PrimeIcons.PENCIL,
-      },
-      {
-        label: 'Contact',
-        icon: PrimeIcons.ENVELOPE,
-      },
-      {
-        label:'Quit',
-        icon: PrimeIcons.POWER_OFF,
-      }
+    this.lang = [
+    { lan: 'Italiano', code: 'it' },
+    { lan: 'English', code: 'en' }
     ];
+
+    this.translate.get("HeaderComponent").subscribe((res: string) => {
+      if (res) {
+        this.labelsHeaderComponent = res;
+      }
+      this.items = [
+        {
+          label: this.labelsHeaderComponent.ABOUT,
+          icon: PrimeIcons.PLUS,
+        },
+        {
+          label: this.labelsHeaderComponent.SKILLS,
+          icon: PrimeIcons.PALETTE,
+        },
+        {
+          label: this.labelsHeaderComponent.EXPERIENCE,
+          icon: PrimeIcons.CODE,
+        },
+        {
+          label: this.labelsHeaderComponent.EDUCATION,
+          icon: PrimeIcons.PENCIL,
+        },
+        {
+          label: this.labelsHeaderComponent.CONTACT,
+          icon: PrimeIcons.ENVELOPE,
+        },
+        {
+          label: this.labelsHeaderComponent.QUIT,
+          icon: PrimeIcons.POWER_OFF,
+        }
+      ];
+    });
+  }
+
+  language() {
+    this.translate.use(this.selectedLang);
+    this.ngOnInit()
   }
 }

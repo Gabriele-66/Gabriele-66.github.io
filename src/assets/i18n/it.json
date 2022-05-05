@@ -1,0 +1,10 @@
+{
+  "HeaderComponent":{
+    "ABOUT": "Info",
+    "SKILLS": "Abilità",
+    "EXPERIENCE": "Esperienza",
+    "EDUCATION": "Istruzione",
+    "CONTACT": "Contatti",
+    "QUIT": "Esci"
+  }
+}
