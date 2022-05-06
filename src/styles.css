@@ -3,3 +3,8 @@ body{
   background-color:rgb(13, 17, 23) !important;
   color: rgb(201, 209, 217) !important;
 }
+
+.animate-title {
+  animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.5s; /* don't forget to set a duration! */
+}

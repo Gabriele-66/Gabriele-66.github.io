@@ -6,5 +6,11 @@
     "EDUCATION": "Istruzione",
     "CONTACT": "Contatti",
     "QUIT": "Esci"
+  },
+    "AboutComponent":{
+    "P0": "qualcosa su di me",
+    "P1": "Fin da piccolo ho sempre avuto un senso di motivazione e passione che mi ha guidato in avanti. Che si tratti di esplorare opportunità uniche, acquisire competenze aggiuntive o incontrare nuove persone, porto questi valori in ogni esperienza della mia vita a livello personale e professionale.",
+    "P2": "Amante dell'innovazione e di tutto ciò che riguarda nuova conoscenze. Affronta i problemi con sorriso e cerco di risolverli il prima possibile. Fondamentale è il tempo che scorre, specialmente a lavoro.",
+    "P3": "Per saperne di più su di me, continua a esplorare il mio sito o contattami direttamente."
   }
 }
