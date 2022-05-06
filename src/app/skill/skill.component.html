@@ -1,8 +1,13 @@
 <p-card [style]="{'margin-top': '50px'}">
   <div class="row">
-    <div class="col-lg-6" *ngFor="let item of skill">
+    <div class="col-lg-6 margin" *ngFor="let item of skill">
         <h5>{{ item.lan | uppercase }}</h5>
-        <p-progressBar [value]=item.value></p-progressBar>
+        <div class="progress progress-moved" style="--value: {{item.value}}">
+          <div class="progress-bar">
+            {{item.value}}
+          </div>
+        </div>
       </div>
     </div>
 </p-card>
+

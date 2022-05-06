@@ -1,0 +1,38 @@
+.margin {
+    margin-bottom: 25px;
+}
+
+.progress {
+  border: 0 none;
+  height: 1.5rem;
+  background: #0b213f;
+  border-radius: 6px;
+}
+
+.progress-bar {
+  height: 18px;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  transition: 0.4s linear;
+}
+
+.progress-moved .progress-bar {
+  width: var(--value);
+  margin: 0;
+  background: #93C5FD;
+  animation: progressAnimation 6s;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+@keyframes progressAnimation {
+	0% {
+		 width: 10%;
+	}
+	100% {
+		 width: var(--value);
+	}
+}
