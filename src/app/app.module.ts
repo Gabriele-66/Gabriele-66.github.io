@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { MenubarModule } from 'primeng/menubar';
@@ -12,7 +12,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { ProgressBarModule } from 'primeng/progressbar';
-import {CardModule} from 'primeng/card';
+import { CardModule } from 'primeng/card';
+import { TimelineModule } from "primeng/timeline";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,11 +38,11 @@ import { AboutComponent } from './about/about.component';
   ],
   imports: [
     TranslateModule.forRoot({ // ngx-translate and the loader module
-        loader: {
-            provide: TranslateLoader,
-            useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-        }
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
     }),
     BrowserModule,
     AppRoutingModule,
@@ -55,6 +56,7 @@ import { AboutComponent } from './about/about.component';
     DropdownModule,
     ProgressBarModule,
     CardModule,
+    TimelineModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -63,5 +65,5 @@ export class AppModule { }
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-    return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http);
 }
