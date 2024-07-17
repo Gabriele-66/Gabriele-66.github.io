@@ -24,6 +24,7 @@ import { StudyComponent } from './study/study.component';
 import { WorkComponent } from './work/work.component';
 import { SkillComponent } from './skill/skill.component';
 import { AboutComponent } from './about/about.component';
+import { MaintenianceModeComponent } from './mainteniance-mode/mainteniance-mode.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { AboutComponent } from './about/about.component';
     WorkComponent,
     SkillComponent,
     AboutComponent,
+    MaintenianceModeComponent,
   ],
   imports: [
     TranslateModule.forRoot({ // ngx-translate and the loader module

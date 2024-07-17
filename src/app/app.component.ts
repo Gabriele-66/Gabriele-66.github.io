@@ -8,7 +8,7 @@ import { TranslateService } from "@ngx-translate/core";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  manutenzione = true;
   constructor(private primengConfig: PrimeNGConfig, private translate: TranslateService) {
     translate.setDefaultLang('it');
     translate.use('it');
